@@ -1,0 +1,11 @@
+# V50.0.0
+- Cloudflare-native architecture.
+- D1/R2/Durable Objects/Queues/Workers AI integration.
+- 20-agent audited production model.
+- Durable render dispatch with retries/DLQ.
+- Real-artifact gate: no render success without R2 object.
+- 365-episode series engine.
+- Cost ledger, audit log, artifact provenance.
+- Owner API-key protection, CORS controls, security headers, upload limits.
+- Responsive web control center.
+- GitHub Actions deployment pipeline.

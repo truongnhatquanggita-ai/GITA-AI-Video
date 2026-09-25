@@ -1,0 +1,15 @@
+{
+  "$schema":"node_modules/wrangler/config-schema.json",
+  "name":"gita-ai-v50",
+  "main":"src/index.ts",
+  "compatibility_date":"2026-09-25",
+  "assets":{"directory":"./public","binding":"ASSETS"},
+  "observability":{"enabled":true},
+  "d1_databases":[{"binding":"DB","database_name":"gita-ai-v50","database_id":"REPLACE_WITH_D1_DATABASE_ID","migrations_dir":"migrations"}],
+  "r2_buckets":[{"binding":"MEDIA","bucket_name":"gita-ai-v50-media"}],
+  "ai":{"binding":"AI"},
+  "queues":{"producers":[{"binding":"RENDER_QUEUE","queue":"gita-ai-v50-render"}],"consumers":[{"queue":"gita-ai-v50-render","max_batch_size":5,"max_batch_timeout":10,"max_retries":5,"dead_letter_queue":"gita-ai-v50-render-dlq"}]},
+  "durable_objects":{"bindings":[{"name":"PRODUCTION_ROOM","class_name":"ProductionRoom"}]},
+  "migrations":[{"tag":"v1","new_sqlite_classes":["ProductionRoom"]}],
+  "vars":{"APP_NAME":"GITA AI","APP_VERSION":"50.0.0","MAX_VIDEO_SECONDS":"1800","DEFAULT_VIDEO_FPS":"30","DEFAULT_AUDIO_HZ":"48000","MAX_UPLOAD_MB":"100","ALLOWED_ORIGINS":"*"}
+}

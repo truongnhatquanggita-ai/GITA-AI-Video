@@ -1,0 +1,4 @@
+OWNER_API_KEY=replace-with-long-random-key
+RENDER_API_URL=https://your-render-provider.example/v1/render
+RENDER_API_TOKEN=replace-me
+WEBHOOK_SECRET=replace-me
